@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="font-spacemono bg-white-back w-full h-full min-h-screen flex justify-center">
-      <div className=" w-11/12 h-auto">
+      <div className=" w-11/12 md:w-4/5 lg:w-3/5  h-auto">
         <Header />
         <FormSearch
           handleSearchUser={handleSearchUser}

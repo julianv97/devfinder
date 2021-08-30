@@ -22,7 +22,7 @@ const FormSearch = ({ handleSearchUser, messageError }) => {
               id="user"
               name="user"
               placeholder="Search Github username..."
-              className="bg-white-content outline-none appearance-none focus:bg-white-content w-full flex-shrink-0"
+              className="bg-white-content outline-none appearance-none focus:bg-white-content w-full flex-shrink-0 text-gray-600 pl-4"
             />
           </div>
           <button

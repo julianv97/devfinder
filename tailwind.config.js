@@ -11,7 +11,10 @@ module.exports = {
         'btn-blue-hover': '#60ABFF',
         'header-blue' : '#4B6A9B',
         'white-back' : '#F6F8FF',
-        'white-content': '#FEFEFE'
+        'white-content': '#FEFEFE',
+        'h1-blue':'#2B3442',
+        'white-repos':'#F6F8FF',
+        'blue-info':'#4B6A9B'
       }
     },
   },
