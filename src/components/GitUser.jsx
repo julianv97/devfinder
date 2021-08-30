@@ -22,7 +22,7 @@ const GitUser = ({ userInfo }) => {
   let dateJoined = userInfo.created_at.slice(0, 10).split("-");
 
   return (
-    <section className="bg-white-content dark:bg-dark-content pt-10 mb-10 shadow-2xl rounded-xl text-sm ">
+    <section className="bg-white-content dark:bg-dark-content transform duration-200 pt-10 mb-10 shadow-2xl rounded-xl text-sm ">
       <article className="pl-6 pb-6 flex">
         <div>
           <img
@@ -52,13 +52,13 @@ const GitUser = ({ userInfo }) => {
         </div>
       </article>
 
-      <article className="pl-6">
-        <p className="text-gray-600 dark:text-white">
+      <article className="pl-6 text-lg">
+        <p className="text-gray-600 dark:text-white  ">
           {userInfo.bio ? userInfo.bio : "This profile has no bio"}
         </p>
       </article>
 
-      <article className="bg-gray-200 dark:bg-dark-back mt-6 py-2 text-gray-700 dark:text-white w-11/12 rounded-xl flex justify-evenly mx-auto">
+      <article className="bg-gray-200 dark:bg-dark-back mt-6 py-2 text-gray-700 dark:text-white w-11/12 rounded-xl flex justify-evenly mx-auto transform duration-200">
         <div>
           <p>Repos</p>
           <span className="font-bold pt-1 text-base text-black dark:text-white flex justify-center">
@@ -79,7 +79,7 @@ const GitUser = ({ userInfo }) => {
         </div>
       </article>
 
-      <article className="text-blue-info dark:text-white pl-6 py-6 flex flex-col pt-8">
+      <article className="text-blue-info dark:text-white pl-6 py-6 flex flex-col md:grid md:grid-cols-2 pt-8">
         <div className="flex items-center py-2">
           <MdLocationOn className="text-2xl mr-4" />
           <p className="capitalize">
