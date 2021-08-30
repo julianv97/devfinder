@@ -22,7 +22,7 @@ const GitUser = ({ userInfo }) => {
   let dateJoined = userInfo.created_at.slice(0, 10).split("-");
 
   return (
-    <section className="bg-white-content pt-10 mb-10 shadow-2xl rounded-xl text-sm ">
+    <section className="bg-white-content dark:bg-dark-content pt-10 mb-10 shadow-2xl rounded-xl text-sm ">
       <article className="pl-6 pb-6 flex">
         <div>
           <img
@@ -31,8 +31,10 @@ const GitUser = ({ userInfo }) => {
             className="w-20 h-20 rounded-full"
           />
         </div>
-        <div className="pl-8">
-          <h3 className="text-h1-blue font-bold text-lg">{userInfo.name}</h3>
+        <div className="pl-8 ">
+          <h3 className="text-h1-blue dark:text-white   font-bold text-lg">
+            {userInfo.name}
+          </h3>
           <p>
             <a
               href={userInfo.html_url}
@@ -43,7 +45,7 @@ const GitUser = ({ userInfo }) => {
               @{userInfo.login}
             </a>
           </p>
-          <p className="text-gray-600 pt-2">
+          <p className="text-gray-600 dark:text-white pt-2">
             Joined{" "}
             {`${dateJoined[2]} ${months[dateJoined[1] - 1]} ${dateJoined[0]}`}
           </p>
@@ -51,33 +53,33 @@ const GitUser = ({ userInfo }) => {
       </article>
 
       <article className="pl-6">
-        <p className="text-gray-600">
+        <p className="text-gray-600 dark:text-white">
           {userInfo.bio ? userInfo.bio : "This profile has no bio"}
         </p>
       </article>
 
-      <article className="bg-gray-200 mt-6 py-2 text-gray-700 w-11/12 rounded-xl flex justify-evenly mx-auto">
+      <article className="bg-gray-200 dark:bg-dark-back mt-6 py-2 text-gray-700 dark:text-white w-11/12 rounded-xl flex justify-evenly mx-auto">
         <div>
           <p>Repos</p>
-          <span className="font-bold text-base text-black flex justify-center">
+          <span className="font-bold pt-1 text-base text-black dark:text-white flex justify-center">
             {userInfo.public_repos}
           </span>
         </div>
         <div className="px-4">
           <p>Followers</p>
-          <span className="font-bold text-base text-black flex justify-center">
+          <span className="font-bold pt-1 text-base text-black dark:text-white flex justify-center">
             {userInfo.followers}
           </span>
         </div>
         <div>
           <p>Following</p>
-          <span className="font-bold text-base text-black flex justify-center">
+          <span className="font-bold pt-1 text-base text-black dark:text-white flex justify-center">
             {userInfo.following}
           </span>
         </div>
       </article>
 
-      <article className="text-blue-info pl-6 py-6 flex flex-col pt-8">
+      <article className="text-blue-info dark:text-white pl-6 py-6 flex flex-col pt-8">
         <div className="flex items-center py-2">
           <MdLocationOn className="text-2xl mr-4" />
           <p className="capitalize">
@@ -86,7 +88,7 @@ const GitUser = ({ userInfo }) => {
         </div>
         <div className="flex items-center py-2">
           <BiLinkAlt className="text-2xl mr-4" />
-          <p className={!userInfo.blog ? "capitalize" : ""}>
+          <div className={!userInfo.blog ? "capitalize" : ""}>
             {userInfo.blog ? (
               <a
                 href={userInfo.blog ? userInfo.blog : ""}
@@ -99,7 +101,7 @@ const GitUser = ({ userInfo }) => {
             ) : (
               <p className="">not available</p>
             )}
-          </p>
+          </div>
         </div>
         <div className="flex items-center py-2">
           <FaTwitter className="text-2xl mr-4" />

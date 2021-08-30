@@ -14,17 +14,13 @@ const useFetch = (url) => {
       .then((response) => response.json())
       .then((data) => {
         if (data.message) {
-          console.log(data);
           setMessageError("No Results");
         } else {
           setUserInfo(data);
           setMessageError("");
-          console.log("all good");
         }
       })
-      .catch((error) => {
-        console.log("Error fetching data: ", error);
-      })
+      .catch(() => {})
       .finally(() => {
         setIsLoading(false);
       });
