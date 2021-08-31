@@ -31,4 +31,3 @@ const useFetch = (url) => {
 
 export default useFetch;
 
-/* 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 */
