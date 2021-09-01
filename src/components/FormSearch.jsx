@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Field, Form } from "formik";
 import { BsSearch } from "react-icons/bs";
 
-const FormSearch = ({ handleSearchUser, messageError }) => {
+const FormSearch = ({ handleSearchUser, messageError, colorTheme }) => {
   return (
     <div className="bg-white-content dark:bg-dark-content transform duration-200 my-10 h-14 shadow-2xl rounded-xl">
       <Formik
@@ -22,7 +22,9 @@ const FormSearch = ({ handleSearchUser, messageError }) => {
               id="user"
               name="user"
               placeholder="Search Github username..."
-              className="bg-white-content dark:bg-dark-content outline-none appearance-none focus:bg-white-content w-11/12 transform duration-200 flex-shrink-0 text-gray-600 dark:text-white pl-4"
+              className={`${
+                colorTheme === "light" ? "noche" : "dia"
+              } bg-white-content dark:bg-dark-content outline-none appearance-none focus:bg-white-content w-11/12 transform duration-200 flex-shrink-0 text-gray-600 dark:text-white pl-4 `}
             />
           </div>
           <button

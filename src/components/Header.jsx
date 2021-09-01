@@ -1,10 +1,9 @@
 import React from "react";
-import useDarkMode from "../customHooks/useDarkMode";
+
 import { IoSunny } from "react-icons/io5";
 import { FaMoon } from "react-icons/fa";
 
-const Header = () => {
-  const [colorTheme, setTheme] = useDarkMode();
+const Header = ({ colorTheme, setTheme }) => {
   return (
     <header className="flex justify-between text-header-blue dark:text-white mt-6 ">
       <h1 className="font-bold text-2xl">devfinder</h1>
